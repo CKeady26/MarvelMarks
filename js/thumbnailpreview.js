@@ -1,9 +1,0 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <link href="http://codegena.com/assets/css/image-preview-for-link.css" rel="stylesheet">     
-  <script type="text/javascript">
-    $(function() {
-                $('#p1 a').miniPreview({ prefetch: 'pageload' });
-                $('#p2 a').miniPreview({ prefetch: 'parenthover' });
-                $('#p3 a').miniPreview({ prefetch: 'none' });
-            });
-  </script> <script src="http://codegena.com/assets/js/image-preview-for-link.js"></script>

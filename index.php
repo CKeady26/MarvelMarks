@@ -10,6 +10,21 @@
 	</head>
 	
 	<body>
+		<form action="/Process_URL.php">
+			<input type="text" name="address" value="" placeholder="enter URL"><input type="submit" value="Submit">
+		</form>
+		
+		</p>
+		</p>
+		</p>
+	
+	
+	
+	
+	
+	
+	
+	
 		<!-- .preview keeps dimensions of scaled iframe under control -->
 		<div class="preview">
 		  <iframe src="http://www.gamespot.com/" sandbox></iframe>
