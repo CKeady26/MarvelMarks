@@ -7,7 +7,7 @@
 	
 	if ($username && $password)
 	{
-		$connect = mysql_connect("localhost", "root", "muffin183") or die("Could not connect to MySQL database!");
+		$connect = mysql_connect("localhost", "root", "PASSWORD HERE") or die("Could not connect to MySQL database!");
 		mysql_select_db("phplogin") or die("Could not find specified database!");
 		
 		$query = mysql_query("SELECT * FROM Users WHERE username='$username'");
