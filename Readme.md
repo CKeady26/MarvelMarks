@@ -7,6 +7,7 @@ A simple password protected, multi-user website that stores user web bookmarks i
 Dependencies:
 
  - MySQL
+ - A MySQL Database
  - PHP 5.5
  
  Recommended:
@@ -16,10 +17,10 @@ Dependencies:
  - Regenerate stored hash of user password upon login.
  - Add support for folders.
  - Send password reset requests to listed user email.
- - Link to register new users.
  - Check username availability, deny creation if taken.
+ - Logically separate all project files into folders.
+ - Replace "mysql" function calls with "mysqli" equivalents, as they have been deprecated.
+ - Finish Python script for first-time user setup.
  
  #####Notes
-
-Default username/password pairs for login page available in the "`password_protect.php`" file.
-Change these ASAP before hosting this project on your server.
+ None yet.

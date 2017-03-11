@@ -2,13 +2,16 @@
 	session_start();
 
 
-	$username = $_POST['username'];
-	$password = $_POST['password'];
+	$username = strtolower(strip_tags($_POST['username']));
+	$password = strip_tags($_POST['password']);
 	
 	if ($username && $password)
 	{
-		$connect = mysql_connect("localhost", "root", "muffin183") or die("Could not connect to MySQL database!");
-		mysql_select_db("phplogin") or die("Could not find specified database!");
+		$hostname = "";
+		$dbloginusername = "";
+		$dbloginpassword = "";
+		$connect = mysql_connect("$hostname", "$dbloginusername", "$dbloginpassword") or die("Could not connect to MySQL database at address " . $hostname . " using provided login credentials!");
+		mysql_select_db("MarvelMarks") or die("Could not find specified database!");
 		
 		$query = mysql_query("SELECT * FROM Users WHERE username='$username'");
 		
@@ -20,17 +23,20 @@
 			{
 				$dbusername = $row['username'];
 				$dbpassword = $row['password'];
-			}
-			//check to see if they match
-			if ($username == $dbusername && $password == $dbpassword)
-			{
-				//found corresponding user/pass in MySQL server, redirect to main.php
-				header('Location: main.php');
-				$_SESSION['username'] = $username;
-			}
-			else
-			{
-				echo ("Incorrect Username/Password");
+				//check to see if they match
+				if ($username == $dbusername && password_verify($password, $dbpassword))
+				{
+					//regenerate pwd hash
+					//$queryreg = mysql_query("INSERT INTO Users(id, username, password, email, date) VALUES ('', '$username','$password', '$email', '$date')");
+					
+					//found corresponding user/pass in MySQL server, redirect to index.php
+					header('Location: index.php');
+					$_SESSION['username'] = $username;
+				}
+				else
+				{
+					echo ("Incorrect Username/Password");
+				}
 			}
 		}
 		else
@@ -40,6 +46,7 @@
 	}
 	else
 	{
+		//change this later to be a scripted, Android toast like notification, and have it appear on index.php instead
 		die("Please enter a username and a password:");
 	}
 ?>
