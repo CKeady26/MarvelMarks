@@ -17,7 +17,6 @@ Dependencies:
  - Regenerate stored hash of user password upon login.
  - Add support for folders.
  - Send password reset requests to listed user email.
- - Check username availability, deny creation if taken.
  - Logically separate all project files into folders.
  - Replace "mysql" function calls with "mysqli" equivalents, as they have been deprecated.
  - Finish Python script for first-time user setup.
