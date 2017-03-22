@@ -11,15 +11,17 @@ Dependencies:
  - PHP 5.5
  
  Recommended:
- - Webserver (Apache, NGINX, etc.)
+ - Webserver (Apache, NGINX, etc.) on which to host MarvelMarks
  
  ####Todo
+Important:
  - Regenerate stored hash of user password upon login.
- - Add support for folders.
  - Send password reset requests to listed user email.
  - Logically separate all project files into folders.
  - Replace "mysql" function calls with "mysqli" equivalents, as they have been deprecated.
- - Finish Python script for first-time user setup.
+Secondary:
+- Add support for user bookmark folders.
+- Finish Python script for first-time user setup.
  
  #####Notes
  None yet.

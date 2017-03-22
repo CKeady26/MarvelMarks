@@ -30,9 +30,9 @@
 					else
 					{
 						//open db
-						$hostname = "";
-						$dbloginusername = "";
-						$dbloginpassword = "";
+						$hostname = "localhost";
+						$dbloginusername = "root";
+						$dbloginpassword = "3a92a667";
 						$connect = mysql_connect("$hostname", "$dbloginusername", "$dbloginpassword") or die("Could not connect to MySQL database at address " . $hostname . " using provided login credentials!");
 						mysql_select_db("MarvelMarks");
 						

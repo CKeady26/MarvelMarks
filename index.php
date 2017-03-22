@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>4 Col Portfolio - Start Bootstrap Template</title>
+    <title><?php echo $_SESSION['username'] ?>'s Bookmarks</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -31,10 +31,32 @@
 <body>
 
 <?php
-	//if(!($_SESSION['username']))
-	//{
-	//	die("You must be logged in to access this page! Please <a href='login.html'>login here.</a>");
-	//}
+	session_start();
+	
+	//$username = $_SESSION['username'];
+	
+	if(!($_SESSION['username']))
+	{
+		die("You must be logged in to access this page! Please <a href='login.html'>login here.</a>");
+	}
+	//login to db
+	$hostname = "localhost";
+	$dbloginusername = "root";
+	$dbloginpassword = "3a92a667";
+	$connect = mysql_connect("$hostname", "$dbloginusername", "$dbloginpassword") or die("Could not connect to MySQL database at address " . $hostname . " using provided login credentials!");
+	mysql_select_db("MarvelMarks");
+ 
+	//retrieve user bookmarks from db
+	$userID = mysql_query("SELECT id FROM URL WHERE id.....");
+	$bookmarks = mysql_query("SELECT url FROM products WHERE product = '$product'");
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 ?>
 		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
