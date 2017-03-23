@@ -1,9 +1,9 @@
-#MarvelMarks
+# MarvelMarks
 
-##What is MarvelMarks?
+## What is MarvelMarks?
 A simple password protected, multi-user website that stores user web bookmarks in a MySQL database, much like Google Chrome's bookmark manager addon.
 
-###Dependencies + Additional Info
+### Dependencies + Additional Info
 Dependencies:
 
  - MySQL
@@ -13,7 +13,7 @@ Dependencies:
  Recommended:
  - Webserver (Apache, NGINX, etc.) on which to host MarvelMarks
  
- ####Todo
+ #### Todo
 Important:
  - Regenerate stored hash of user password upon login.
  - Send password reset requests to listed user email.
@@ -23,5 +23,5 @@ Secondary:
 - Add support for user bookmark folders.
 - Finish Python script for first-time user setup.
  
- #####Notes
+ ##### Notes
  None yet.
