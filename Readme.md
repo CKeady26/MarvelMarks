@@ -8,7 +8,7 @@ Dependencies:
 
  - MySQL
  - A MySQL Database
- - PHP 5.5
+ - PHP 5.5+
  
  Recommended:
  - Webserver (Apache, NGINX, etc.) on which to host MarvelMarks
@@ -19,6 +19,7 @@ Important:
  - Send password reset requests to listed user email.
  - Logically separate all project files into folders.
  - Replace "mysql" function calls with "mysqli" equivalents, as they have been deprecated.
+
 Secondary:
 - Add support for user bookmark folders.
 - Finish Python script for first-time user setup.
